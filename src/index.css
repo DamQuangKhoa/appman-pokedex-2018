@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   /*font-family: sans-serif;*/
-  font-family: 'Atma', cursive;
+  font-family: "Atma", cursive;
 }
 
 #root {
@@ -14,9 +14,10 @@ body {
   border-width: 28px 103px 28px 74px;
   border-style: solid;
   position: relative;
+  overflow-x: scroll;
 }
 
-#root:before {
+/* #root:before {
   content: "";
   position: absolute;
   left: -80px;
@@ -25,7 +26,7 @@ body {
   width: 85px;
   height: 180px;
   top: 40%;
-}
+} */
 
 #root:after {
   content: "";
@@ -37,4 +38,7 @@ body {
   right: -79px;
   top: 50%;
   border: 1px inset #7b7b7b;
+}
+.search {
+  background-color: "";
 }
