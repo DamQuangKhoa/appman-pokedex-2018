@@ -74,6 +74,10 @@ const HomePage = props => {
     searhByValue(e.target.value);
   };
   const addToMyPoke = item => {
+    const data = searchPoke.filter(e => {
+      return e.id !== item.id;
+    });
+    setSearchPoke(data);
     setMyPoke([...myPoke, item]);
   };
   const handleRemove = item => {
@@ -81,6 +85,7 @@ const HomePage = props => {
       return e.id !== item.id;
     });
     setMyPoke(data);
+    setSearchPoke([...searchPoke, item]);
   };
   return (
     <>
@@ -89,7 +94,7 @@ const HomePage = props => {
         footer={null}
         title={
           <Search
-            placeholder="input search text"
+            placeholder="Find pokemon"
             onChange={value => handleSearch(value)}
           />
         }
